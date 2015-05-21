@@ -57,3 +57,11 @@ received in data buffer with first byte is command, as follows
 	leaderboard: name and ids
 64
 	size of canvas, comes when select region. fixed for all regions
+
+tasks on server
+1. generate user at random location
+2. generate seeds at random location
+3. split into multiple parts if collides with splitter.
+4. handle commands to split, eject
+5. logic to eat others given some constraints.
+6. if user have several parts, keep them together.
