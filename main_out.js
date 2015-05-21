@@ -1,3 +1,9 @@
+var logCount = 0;
+function limitLog() {
+	if(logCount++ < 50) {
+		console.log(arguments);
+	}
+}
 (function(window_, jQuery) {
 
     var minMass = 100000;
@@ -410,6 +416,7 @@
     function reset() {
         mouseX2 = (mouseX - width / 2) / ratio + px;
         mouseY2 = (mouseY - height / 2) / ratio + py;
+		//limitLog("x:", mouseX, "y:", mouseY, "x2:", mouseX2, "y2:", mouseY2, "w:", width, "h:", height, "r:", ratio, "px:", px, "py:", py);
     }
     function f() {
         if (ws != null && ws.readyState == ws.OPEN) {
@@ -481,7 +488,7 @@
     }
     function draw() {
         var tick = +new Date;
-        Ba++;
+        //Ba++;
         build();
         timestamp = +new Date;
         if (0 < myPoints.length) {
@@ -684,7 +691,7 @@
         var mouseY = 0;
         var mouseX2 = -1;
         var mouseY2 = -1;
-        var Ba = 0;
+        //var Ba = 0;
         var timestamp = 0;
         var result = null;
         var left = 0;
